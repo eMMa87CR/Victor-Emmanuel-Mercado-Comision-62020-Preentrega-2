@@ -1,0 +1,116 @@
+:root {
+    --primary-font: 'Arial', sans-serif;
+    --bg-color: hsl(240, 3%, 77%);
+    --primary-color: hsl(189, 100%, 25%);
+    --secondary-color: #444;
+    --accent-color: #555;
+    --light-bg-color: #fff;
+    --border-color: #ccc;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    gap: 20px;
+}
+
+.carrito {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin: 20px;
+    max-width: 300px;
+    background-color: var(--light-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius);
+}
+
+.carrito h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: var(--accent-color);
+}
+
+.lista-carrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-carrito li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--bg-color);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.lista-carrito li:hover {
+    background-color: #e9e9e9;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .carrito {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .productos {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .carrito {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        padding: 20px;
+    }
+    .productos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .carrito {
+        width: 300px;
+        margin: 20px auto;
+    }
+}
+
+/* Accesibilidad */
+a:focus, button:focus, input:focus {
+    outline: 3px solid var(--accent-color);
+}
