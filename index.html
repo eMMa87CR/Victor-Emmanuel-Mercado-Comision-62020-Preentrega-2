@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmacia Roca</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
-    <h1>Farmacia Roca</h1>
-    
-    <div id="productos"></div>
-    
-    <div id="carrito">
-        <h2>Carrito</h2>
-        <ul id="lista-carrito"></ul>
-        <p>Total: $<span id="total-carrito">0</span></p>
-        <button id="realizar-compra">Realizar Compra</button>
-    </div>
 
-    <script src="main.js"></script>
+<body>
+    <div id="contenedor-principal">
+        <h1>Farmacia Roca</h1>
+        <div id="productos"></div>
+        <div id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p id="total-carrito"></p>
+            <button id="realizar-compra">Realizar Compra</button>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+        </div>
+
+        <!-- <script src="script.js"></script> -->
+        <script src="main.js"></script>
 </body>
+
 </html>
