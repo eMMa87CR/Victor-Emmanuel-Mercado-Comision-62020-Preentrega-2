@@ -105,7 +105,7 @@ class Producto {
     if (carrito.productos.length === 0) {
       alert("No hay productos en el carrito para comprar.");
     } else {
-      alert(`Compra realizada con éxito. Total: $${carrito.calcularTotal()}`);
+      alert(`Compra realizada con éxito. Total: $${carrito.calcularTotal()}. Muchas gracias por su compra.`);
       carrito.vaciar();
       actualizarCarrito();
       guardarCarritoEnLocalStorage();
