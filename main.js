@@ -134,11 +134,14 @@ class Producto {
       actualizarCarrito();
     }
   }
-  
   document.addEventListener("DOMContentLoaded", () => {
-    mostrarProductos();
-    cargarCarritoDeLocalStorage();
-    document.getElementById("realizar-compra").addEventListener("click", realizarCompra);
-    document.getElementById("vaciar-carrito").addEventListener("click", vaciarCarrito);
+      mostrarProductos();
+      cargarCarritoDeLocalStorage();
+      agregarEventListeners();
   });
+  
+  function agregarEventListeners() {
+      document.getElementById("realizar-compra").addEventListener("click", realizarCompra);
+      document.getElementById("vaciar-carrito").addEventListener("click", vaciarCarrito);
+  }
   
